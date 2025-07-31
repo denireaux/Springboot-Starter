@@ -18,11 +18,9 @@ public class StarterApplication {
 	}
 
 	@RequestMapping("susan")
-	public String requestMethodName(@RequestParam String param) {
-		return "LITERAL BUS";
+	public String susan(@RequestParam(defaultValue = "I am a bus") String param) {
+		return "Susan Bai says: " + param;
 	}
-	
-	
 
 	public static void main(String[] args) {
 		SpringApplication.run(StarterApplication.class, args);
